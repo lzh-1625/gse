@@ -1,4 +1,4 @@
-module github.com/go-ego/gse
+module github.com/lzh-1625/gse
 
 go 1.17
 
