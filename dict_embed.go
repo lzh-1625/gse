@@ -8,15 +8,15 @@ import (
 )
 
 var (
-	//go:embed data/dict/jp/dict.txt
+	////go:embed data/dict/jp/dict.txt
 	ja string
 
-	//go:embed data/dict/zh/t_1.txt
+	////go:embed data/dict/zh/t_1.txt
 	zhT string
 	//go:embed data/dict/zh/s_1.txt
 	zhS string
 
-	//go:embed data/dict/zh/idf.txt
+	////go:embed data/dict/zh/idf.txt
 	ZhIdf string
 )
 
