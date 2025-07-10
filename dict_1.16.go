@@ -56,15 +56,12 @@ func (seg *Segmenter) loadZhST(d string) (begin int, err error) {
 func (seg *Segmenter) LoadDictEmbed(dict ...string) (err error) {
 	if len(dict) > 0 {
 		d := dict[0]
-		if d == "ja" {
-			return seg.LoadDictStr(ja)
-		}
 
 		if d == "zh" {
 			return seg.loadZh()
 		}
 		if d == "zh_s" {
-			return seg.LoadDictStr(zhS)
+			return seg.LoadDictStr(Decompressed(zhS))
 		}
 		if d == "zh_t" {
 			return seg.LoadDictStr(zhT)
