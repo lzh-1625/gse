@@ -15,9 +15,9 @@
 package relevance
 
 import (
-	"github.com/go-ego/gse"
-	"github.com/go-ego/gse/hmm/segment"
-	"github.com/go-ego/gse/hmm/stopwords"
+	"github.com/lzh-1625/gse"
+	"github.com/lzh-1625/gse/hmm/segment"
+	"github.com/lzh-1625/gse/hmm/stopwords"
 )
 
 // Relevance easily scalable Relevance calculations (for idf, tf-idf, bm25 and so on)

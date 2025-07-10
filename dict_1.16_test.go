@@ -7,8 +7,8 @@ import (
 	_ "embed"
 	"testing"
 
-	"github.com/go-ego/gse/consts"
-	"github.com/go-ego/gse/types"
+	"github.com/lzh-1625/gse/consts"
+	"github.com/lzh-1625/gse/types"
 	"github.com/vcaesar/tt"
 )
 

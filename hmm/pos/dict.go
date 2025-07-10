@@ -17,7 +17,7 @@ package pos
 import (
 	"math"
 
-	"github.com/go-ego/gse"
+	"github.com/lzh-1625/gse"
 )
 
 // Dict type a dictionary for the word segmentation.

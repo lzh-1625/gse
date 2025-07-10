@@ -18,11 +18,11 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/go-ego/gse"
-	"github.com/go-ego/gse/consts"
-	"github.com/go-ego/gse/hmm/segment"
-	"github.com/go-ego/gse/hmm/stopwords"
-	"github.com/go-ego/gse/types"
+	"github.com/lzh-1625/gse"
+	"github.com/lzh-1625/gse/consts"
+	"github.com/lzh-1625/gse/hmm/segment"
+	"github.com/lzh-1625/gse/hmm/stopwords"
+	"github.com/lzh-1625/gse/types"
 )
 
 // BM25 Best Match

@@ -20,7 +20,7 @@ package gse
 import (
 	"regexp"
 
-	"github.com/go-ego/gse/hmm"
+	"github.com/lzh-1625/gse/hmm"
 )
 
 const (

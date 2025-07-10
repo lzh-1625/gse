@@ -6,19 +6,19 @@ And supports with [elasticsearch](https://github.com/vcaesar/go-gse-elastic) and
 <!--<img align="right" src="https://raw.githubusercontent.com/go-ego/ego/master/logo.jpg">-->
 <!--<a href="https://circleci.com/gh/go-ego/ego/tree/dev"><img src="https://img.shields.io/circleci/project/go-ego/ego/dev.svg" alt="Build Status"></a>-->
 
-[![Build Status](https://github.com/go-ego/gse/workflows/Go/badge.svg)](https://github.com/go-ego/gse/commits/master)
+[![Build Status](https://github.com/lzh-1625/gse/workflows/Go/badge.svg)](https://github.com/lzh-1625/gse/commits/master)
 [![CircleCI Status](https://circleci.com/gh/go-ego/gse.svg?style=shield)](https://circleci.com/gh/go-ego/gse)
 [![codecov](https://codecov.io/gh/go-ego/gse/branch/master/graph/badge.svg)](https://codecov.io/gh/go-ego/gse)
 [![Build Status](https://travis-ci.org/go-ego/gse.svg)](https://travis-ci.org/go-ego/gse)
-[![Go Report Card](https://goreportcard.com/badge/github.com/go-ego/gse)](https://goreportcard.com/report/github.com/go-ego/gse)
-[![GoDoc](https://godoc.org/github.com/go-ego/gse?status.svg)](https://godoc.org/github.com/go-ego/gse)
-[![GitHub release](https://img.shields.io/github/release/go-ego/gse.svg)](https://github.com/go-ego/gse/releases/latest)
+[![Go Report Card](https://goreportcard.com/badge/github.com/lzh-1625/gse)](https://goreportcard.com/report/github.com/lzh-1625/gse)
+[![GoDoc](https://godoc.org/github.com/lzh-1625/gse?status.svg)](https://godoc.org/github.com/lzh-1625/gse)
+[![GitHub release](https://img.shields.io/github/release/go-ego/gse.svg)](https://github.com/lzh-1625/gse/releases/latest)
 [![Join the chat at https://gitter.im/go-ego/ego](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/go-ego/ego?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-<!-- [![Release](https://github-release-version.herokuapp.com/github/go-ego/gse/release.svg?style=flat)](https://github.com/go-ego/gse/releases/latest) -->
+<!-- [![Release](https://github-release-version.herokuapp.com/github/go-ego/gse/release.svg?style=flat)](https://github.com/lzh-1625/gse/releases/latest) -->
 <!--<a href="https://github.com/go-ego/ego/releases"><img src="https://img.shields.io/badge/%20version%20-%206.0.0%20-blue.svg?style=flat-square" alt="Releases"></a>-->
 
-[简体中文](https://github.com/go-ego/gse/blob/master/README_zh.md)
+[简体中文](https://github.com/lzh-1625/gse/blob/master/README_zh.md)
 
 Gse is implements jieba by golang, and try add NLP support and more feature
 
@@ -32,17 +32,17 @@ Gse is implements jieba by golang, and try add NLP support and more feature
 - Support NLP by TensorFlow (in work)
 - Named Entity Recognition (in work)
 - Supports with [elasticsearch](https://github.com/vcaesar/go-gse-elastic) and bleve
-- run<a href="https://github.com/go-ego/gse/blob/master/tools/server/server.go"> JSON RPC service</a>.
+- run<a href="https://github.com/lzh-1625/gse/blob/master/tools/server/server.go"> JSON RPC service</a>.
 
 ## Algorithm:
 
-- [Dictionary](https://github.com/go-ego/gse/blob/master/dictionary.go) with double array trie (Double-Array Trie) to achieve
-- [Segmenter](https://github.com/go-ego/gse/blob/master/dag.go) algorithm is the shortest path (based on word frequency and dynamic programming), and DAG and HMM algorithm word segmentation.
+- [Dictionary](https://github.com/lzh-1625/gse/blob/master/dictionary.go) with double array trie (Double-Array Trie) to achieve
+- [Segmenter](https://github.com/lzh-1625/gse/blob/master/dag.go) algorithm is the shortest path (based on word frequency and dynamic programming), and DAG and HMM algorithm word segmentation.
 
 ## Text Segmentation speed:
 
-- <a href="https://github.com/go-ego/gse/blob/master/tools/benchmark/benchmark.go"> single thread</a> 9.2MB/s
-- <a href="https://github.com/go-ego/gse/blob/master/tools/benchmark/goroutines/goroutines.go">goroutines concurrent</a> 26.8MB/s.
+- <a href="https://github.com/lzh-1625/gse/blob/master/tools/benchmark/benchmark.go"> single thread</a> 9.2MB/s
+- <a href="https://github.com/lzh-1625/gse/blob/master/tools/benchmark/goroutines/goroutines.go">goroutines concurrent</a> 26.8MB/s.
 - HMM text segmentation single thread 3.2MB/s. (2core 4threads Macbook Pro).
 
 ## Binding:
@@ -54,13 +54,13 @@ Gse is implements jieba by golang, and try add NLP support and more feature
 With Go module support (Go 1.11+), just import:
 
 ```go
-import "github.com/go-ego/gse"
+import "github.com/lzh-1625/gse"
 ```
 
 Otherwise, to install the gse package, run the command:
 
 ```
-go get -u github.com/go-ego/gse
+go get -u github.com/lzh-1625/gse
 ```
 
 ## Use
@@ -72,7 +72,7 @@ import (
 	_ "embed"
 	"fmt"
 
-	"github.com/go-ego/gse"
+	"github.com/lzh-1625/gse"
 )
 
 //go:embed testdata/test_en2.txt
@@ -133,8 +133,8 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/go-ego/gse"
-	"github.com/go-ego/gse/hmm/pos"
+	"github.com/lzh-1625/gse"
+	"github.com/lzh-1625/gse/hmm/pos"
 )
 
 var (
@@ -163,7 +163,7 @@ func main() {
 	// seg.LoadDict("jp")
 	//
 	// Load the dictionary
-	// seg.LoadDict("your gopath"+"/src/github.com/go-ego/gse/data/dict/dictionary.txt")
+	// seg.LoadDict("your gopath"+"/src/github.com/lzh-1625/gse/data/dict/dictionary.txt")
 
 	cut()
 
@@ -233,7 +233,7 @@ import (
 	"fmt"
 	_ "embed"
 
-	"github.com/go-ego/gse"
+	"github.com/lzh-1625/gse"
 )
 
 //go:embed test_en_dict3.txt
@@ -272,7 +272,7 @@ How to use it with elasticsearch?
 ## Authors
 
 - [Maintainers](https://github.com/orgs/go-ego/people)
-- [Contributors](https://github.com/go-ego/gse/graphs/contributors)
+- [Contributors](https://github.com/lzh-1625/gse/graphs/contributors)
 
 ## License
 

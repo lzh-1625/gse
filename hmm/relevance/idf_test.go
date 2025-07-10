@@ -6,8 +6,8 @@ import (
 
 	"github.com/vcaesar/tt"
 
-	"github.com/go-ego/gse"
-	"github.com/go-ego/gse/hmm/extracker"
+	"github.com/lzh-1625/gse"
+	"github.com/lzh-1625/gse/hmm/extracker"
 )
 
 var (
