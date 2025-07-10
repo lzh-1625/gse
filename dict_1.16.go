@@ -30,7 +30,7 @@ func NewEmbed(dict ...string) (seg Segmenter, err error) {
 }
 
 func (seg *Segmenter) loadZh() error {
-	return seg.LoadDictStr(zhS + zhT)
+	return seg.LoadDictStr(zhS)
 }
 
 func (seg *Segmenter) loadZhST(d string) (begin int, err error) {
@@ -43,10 +43,6 @@ func (seg *Segmenter) loadZhST(d string) (begin int, err error) {
 	if strings.Contains(d, "zh_s,") {
 		begin = 1
 		err = seg.LoadDictStr(zhS)
-	}
-	if strings.Contains(d, "zh_t,") {
-		begin = 1
-		err = seg.LoadDictStr(zhT)
 	}
 
 	return
@@ -62,9 +58,6 @@ func (seg *Segmenter) LoadDictEmbed(dict ...string) (err error) {
 		}
 		if d == "zh_s" {
 			return seg.LoadDictStr(Decompressed(zhS))
-		}
-		if d == "zh_t" {
-			return seg.LoadDictStr(zhT)
 		}
 
 		if strings.Contains(d, ", ") && seg.DictSep != "," {

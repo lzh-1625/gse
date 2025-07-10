@@ -11,9 +11,6 @@ import (
 )
 
 var (
-	//go:embed data/dict/zh/t_1.txt
-	zhT string
-
 	//go:embed data/dict/zh/s_1.txt
 	zhS string
 )
